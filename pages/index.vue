@@ -1,4 +1,6 @@
-<template>Hello Naveen</template>
+<template>
+  <HomeJumbotron />
+</template>
 <script setup lang="ts">
 definePageMeta({
   layout: "default",
