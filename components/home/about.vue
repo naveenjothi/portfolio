@@ -1,5 +1,7 @@
 <template>
   <div
+    data-aos="fade-up"
+    data-aos-duration="3000"
     class="bg-[#629677] min-h-screen w-full px-4 md:px-10 flex flex-col md:flex-row items-center justify-center"
   >
     <!-- Image and Content container -->

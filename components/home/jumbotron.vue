@@ -26,16 +26,25 @@
     <main class="text-center my-8 sm:my-16">
       <!-- Hero Section -->
       <h1
+        data-aos="fade-up"
         class="text-3xl sm:text-5xl font-bold text-gray-900 animate-fadeIn delay-500"
       >
         Software Engineer & Team Contributor
       </h1>
-      <p class="text-lg sm:text-xl text-gray-700 mt-4 animate-fadeIn delay-750">
+      <p
+        data-aos="fade-up"
+        data-aos-duration="2500"
+        class="text-lg sm:text-xl text-gray-700 mt-4 animate-fadeIn delay-750"
+      >
         Crafting the Backbone of Modern Applications – A Journey with Naveen
         Jothi
       </p>
       <!-- Hero Image -->
-      <div class="mt-4 sm:mt-8 animate-fadeIn delay-1000">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        class="mt-4 sm:mt-8 animate-fadeIn delay-1000"
+      >
         <img
           src="../../assets/resources/nj-avatar.svg"
           alt="Your image"
@@ -46,50 +55,4 @@
   </div>
 </template>
 
-<style scoped lang="scss">
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes dropIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-.animate-dropIn {
-  animation: dropIn 0.5s ease-out forwards;
-}
-
-.delay-500 {
-  animation-delay: 0.5s;
-}
-
-.delay-750 {
-  animation-delay: 0.75s;
-}
-
-.delay-1000 {
-  animation-delay: 1s;
-}
-
-/* Add hover effect for button */
-a:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-</style>
+<style scoped lang="scss"></style>
