@@ -15,10 +15,10 @@
       </div>
       <!-- Right section for content -->
       <div class="md:flex-1 text-center md:text-left py-4 md:py-0">
-        <h1 class="text-2xl font-bold text-gray-900">
+        <h1 class="text-2xl font-bold text-[#e6efea]">
           Hi, I'm Naveen Jothi. Nice to meet you.
         </h1>
-        <h2 class="text-lg md:text-xl text-gray-700 font-medium mt-4">
+        <h2 class="text-lg md:text-xl text-[#e6efea] font-medium mt-4">
           Just over 3.5 years ago, I embarked on a journey in software
           engineering, focusing on crafting web applications that are both
           high-performing and cost-effective. Leading a team diverse and

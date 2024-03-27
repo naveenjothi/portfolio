@@ -21,7 +21,8 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        primary: colors.green,
+        primary: "#629677",
+        secondary: "#e6efea",
       },
     },
     fontSize: {
