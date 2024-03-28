@@ -2,36 +2,49 @@
   <div
     data-aos="fade-up"
     data-aos-duration="3000"
-    class="min-h-screen w-full px-4 md:px-10 flex flex-col md:flex-row items-center justify-center"
+    class="min-h-screen w-full px-4 md:px-10 flex flex-col md:flex-row items-center justify-center flex-wrap"
   >
-    <div class="flex flex-col md:flex-row items-center justify-center w-full">
-      <div class="w-full md:w-1/2">
-        <ul class="flex flex-wrap space-x-4">
-          <li
-            v-for="tab in tabs"
-            :key="tab.label"
-            class="my-2 cursor-pointer text-base"
-            @click="activeTab = tab.label"
+    <div class="flex-auto w-full pt-12 ps-12">
+      <ul class="flex flex-wrap space-x-4 border-b-2 border-slate-200">
+        <li
+          v-for="tab in tabs"
+          :key="tab.label"
+          class="cursor-pointer text-base px-4 py-3 relative z-0"
+          @click="activeTab = tab.label"
+        >
+          <span
+            :class="{
+              'text-primary': activeTab === tab.label,
+            }"
           >
-            <span
-              :class="{
-                'text-primary border-b-4 border-primary':
-                  activeTab === tab.label,
-              }"
-            >
-              {{ tab.label }}
-            </span>
-          </li>
-        </ul>
-        <span
+            {{ tab.label }}
+          </span>
+          <div
+            :class="{
+              'bg-primary h-0.5 w-2/3 absolute bottom-0 z-[-1]':
+                activeTab === tab.label,
+            }"
+          ></div>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="flex flex-col md:flex-row items-center justify-between w-full gap-10"
+    >
+      <div
+        class="w-full md:w-2/5 p-6 flex-auto border border-slate-300 rounded-md min-h-[calc(100vh-160px)]"
+      >
+        <div
           v-if="tabData?.content"
           v-html="tabData.content"
           class="text-left"
-        >
-        </span>
+        />
       </div>
 
-      <div class="md:flex-1 text-center md:text-left py-4 md:py-0 w-full">
+      <div
+        class="w-full md:w-2/5 text-center md:text-left p-6 flex-initial min-h-96"
+      >
         <div
           v-if="activeTab === tabs[0].label"
           data-aos="fade-in"
@@ -98,10 +111,5 @@ const tabData = computed(() =>
   .flex-col.md\:flex-row {
     flex-direction: column;
   }
-}
-
-li:after {
-  content: "";
-  @apply w-10 top-1/2 relative float-right bg-gray-600 h-0.5 mx-5 mt-0.5;
 }
 </style>
